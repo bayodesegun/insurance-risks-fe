@@ -26,7 +26,7 @@
     </div>
     
     <!-- Risk details form -->
-    <div class="col-md-8 col-md-offset-2 col-sm-12 risk-form-div" v-if="Object.keys(riskDetails).length">
+    <div class="col-md-8 col-md-offset-2 col-sm-12 risk-form-div" v-if="Object.keys(riskDetails).length" @keypress.enter="submitForm">
       <hr>
       <button class="btn-danger btn-link pull-right risk-form-hide" v-on:click="hideForm()">&#10060;</button>
       <h3 class="text-center risk-form-header">Risk form for <b>{{ riskDetails.risk }}</b> </h3>
@@ -65,7 +65,7 @@
             <button class="btn btn-danger form-control risk-form-reset" v-on:click="resetForm()" :disabled="Object.keys(formData).length === 0">Reset</button>
           </div>
           <div class="col-md-6 col-sm-12">
-            <button class="btn btn-primary form-control pull-right risk-form-submit" v-on:click="submitForm()">Submit</button>
+            <button class="btn btn-primary form-control pull-right risk-form-submit" v-on:click="submitForm()" :disabled="Object.keys(formData).length === 0">Submit</button>
           </div>
         </div>
       </div>

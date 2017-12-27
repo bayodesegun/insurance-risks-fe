@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-4 col-md-offset-4 col-sm-12 login-form-div">
+  <form class="col-md-4 col-md-offset-4 col-sm-12 login-form">
     <h4>Log In</h4>
     <p class="text-center login-message">Log in to your account to see your risk types.</p>
     <div class="form-group">
@@ -26,7 +26,7 @@
         <button class="btn btn-primary pull-right login-submit" @click="submit()">Login</button>
       </div>
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
