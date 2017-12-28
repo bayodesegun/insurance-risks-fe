@@ -5,7 +5,6 @@ import Resource from 'vue-resource'
 import App from './components/App.vue'
 import router from './router'
 import auth from '@/auth'
-require('bootstrap/dist/css/bootstrap.min.css')
 
 Vue.use(Resource)
 Vue.config.productionTip = false
