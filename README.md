@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/bayodesegun/insurance-risks-fe.svg?branch=master)](https://travis-ci.org/bayodesegun/insurance-risks-fe)
 
-## Run it locally
+## Run it Locally
 To run your own build, please follow the steps below.
 
 ### Get Prerequisites
@@ -18,7 +18,6 @@ To run your own build, please follow the steps below.
 git clone https://github.com/bayodesegun/insurance-risks-fe.git
 cd insurance-risks-fe
 
-``` bash
 # install dependencies
 npm install
 
