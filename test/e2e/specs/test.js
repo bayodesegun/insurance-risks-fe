@@ -81,7 +81,7 @@ module.exports = {
       .pause(300)
       .assert.elementNotPresent('div.risk-select-div')
       .assert.elementNotPresent('div.risk-form-div')
-      .assert.elementPresent('form.login-form')
+      .assert.elementPresent('div.login-form-div')
       .assert.containsText('a.login-logout-link', 'Login')
       .end()
   }
