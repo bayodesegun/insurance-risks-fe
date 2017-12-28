@@ -10,7 +10,7 @@ Vue.use(Resource)
 Vue.config.productionTip = false
 
 // API URLs
-const BASE_URL = (process.env.NODE_ENV == 'production') ? 'https://api.ins-risks.bayodesegun.com': 'http://127.0.0.1:8000'
+const BASE_URL = (process.env.NODE_ENV == 'development') ? 'http://127.0.0.1:8000': 'https://api.ins-risks.bayodesegun.com'
 const RISKS_URL = BASE_URL + '/risks/'
 const LOGIN_URL = BASE_URL + '/obtain-token/'
 

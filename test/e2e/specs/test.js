@@ -28,10 +28,10 @@ module.exports = {
       .setValue('input[type=text]', 'geek')
       .setValue('input[type=password]', 'password')
       .click('button.login-submit')
-      .pause(500)
+      .waitForElementVisible('.welcome-message', 5000)
       .assert.containsText('.welcome-message', 'Welcome! Select a risk type to show the corresponding form.')
       .assert.containsText('a.login-logout-link', 'Logout')
-      .assert.visible('select')
+      .waitForElementVisible('select', 5000)
       .assert.containsText('button.risk-form-show', 'Show Form')
       .assert.elementCountGreaterOrEqualTo('select > option', 1)
   },
@@ -40,9 +40,8 @@ module.exports = {
     browser
       .click("select option:nth-child(1)")
       .click('button.risk-form-show')
-      .pause(500)
+      .waitForElementVisible('div.risk-form-div', 5000)
       .assert.attributeEquals('button.risk-form-show', 'disabled', 'true') // button should be disabled after showing risk form
-      .assert.elementPresent('div.risk-form-div')
       .assert.visible('button.risk-form-hide')
       .assert.containsText('h3.risk-form-header', 'Risk form for')
       .assert.elementCountGreaterOrEqualTo('label', 4)
@@ -68,8 +67,7 @@ module.exports = {
   'What should be present when Hide Risk Form button is clicked': function (browser) {
     browser
       .click('button.risk-form-hide')
-      .pause(300)
-      .assert.elementNotPresent('div.risk-form-div')
+      .waitForElementNotPresent('div.risk-form-div', 5000)
       .getAttribute('button.risk-form-show', 'disabled', function(result) {
         this.assert.equal(result.value, null) // button should be enabled now
       })
@@ -78,10 +76,9 @@ module.exports = {
   'What should be present when Logout button is clicked': function (browser) {
     browser
       .click('a.login-logout-link')
-      .pause(300)
+      .waitForElementVisible('div.login-form-div', 5000)
       .assert.elementNotPresent('div.risk-select-div')
-      .assert.elementNotPresent('div.risk-form-div')
-      .assert.elementPresent('div.login-form-div')
+      .assert.elementNotPresent('div.risk-form-div')      
       .assert.containsText('a.login-logout-link', 'Login')
       .end()
   }

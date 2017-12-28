@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 Vue.use(Resource)
 
 // Mock calls to API
-let BASE_URL = (process.env.NODE_ENV == "production") ? 'https://api.ins-risks.bayodesegun.com': 'http://127.0.0.1:8000'
+let BASE_URL = (process.env.NODE_ENV == "development") ? 'http://127.0.0.1:8000': 'https://api.ins-risks.bayodesegun.com'
 let routes = [
   {
     api: 'login',
