@@ -2,7 +2,21 @@
 
 > A Vue.js project
 
-## Build Setup
+[![Build Status](https://travis-ci.org/bayodesegun/insurance-risks-fe.svg?branch=master)](https://travis-ci.org/bayodesegun/insurance-risks-fe)
+
+## Run it locally
+To run your own build, please follow the steps below.
+
+### Get Prerequisites
+- If not already, [install node.js and npm](https://nodejs.org/).
+- Setup the [counterpart backend project](https://github.com/bayodesegun/insurance-risks-api) locally.
+
+### Install Project
+
+``` bash
+# clone project and cd into project root
+git clone https://github.com/bayodesegun/insurance-risks-fe.git
+cd insurance-risks-fe
 
 ``` bash
 # install dependencies
